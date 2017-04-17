@@ -19,4 +19,7 @@ class Course < ApplicationRecord
 	has_many :students, through: :select_courses
 
 	belongs_to :teacher
+
+	validates :name, presence: true
+	validates :c_number, uniqueness: true
 end

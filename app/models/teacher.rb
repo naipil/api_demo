@@ -12,6 +12,9 @@
 class Teacher < ApplicationRecord
 	has_many :courses
 
+	validates :name, presence: true
+	validates :t_number, uniqueness: true
+
 	def remove
 		self.courses.update_all(teacher_id: nil)
 		self.destroy			

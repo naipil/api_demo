@@ -6,7 +6,7 @@ class Api::TeachersController < Api::BaseController
 		return api_error('暂无教师信息！') if @teachers.blank?
 	end
 
-	def remove
+	def destroy
 		if @teacher.blank?
 			return api_error('未找到该教师信息！')
 		else
