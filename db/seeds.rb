@@ -16,4 +16,5 @@ students = Student.create([{name: "赵钱", s_number: "ST000001"},
 														{name: "孙李", s_number: "ST000002"},
 														{name:"周吴", s_number: "ST000003"}])
 SelectCourse.create([{student_id: students.first.id, course_id: courses.first.id}, 
-											{student_id: students.second.id, course_id: courses.last.id}])
+											{student_id: students.second.id, course_id: courses.last.id},
+											{student_id: students.first.id, course_id: courses.second.id},])
